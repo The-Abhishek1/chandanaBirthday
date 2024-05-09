@@ -7,7 +7,8 @@ import video3 from "../bindu/videos/chav3.mp4";
 import video4 from "../bindu/videos/chav1.mp4";
 import video5 from "../bindu/videos/chav13.mp4";
 import video6 from "../bindu/videos/chav6.mp4";
-import video7 from "../bindu/videos/chav5.mp4";
+import video7 from "../bindu/videos/chav14.mp4";
+
 function Footer() {
   const [show, setShow] = useState(false);
   const [firstNo, setFirstNo] = useState(false);
@@ -221,7 +222,9 @@ function Footer() {
         {sixthNo ? (
           <div className="flex pb-10 flex-col items-center italic gap-4 mt-[-20px]">
             <h3 className="text-center text-white">
-              "Her laughter is like music to my ears 🎶😄"
+              "🌹🎈✨ Will you be the 🌟 to my ✨, the 🎶 to my 🎵, and make
+              every moment 💖 with me? 💍🥂 #TogetherForever. I love You, Do you
+              love me?😜💤"
             </h3>
             <video
               autoPlay

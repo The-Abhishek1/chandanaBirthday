@@ -87,9 +87,9 @@ function Footer() {
                 <button
                   onClick={() => {
                     setShow(false);
-                    setFirstNo(true);
+                    setFirstNo(!firstNo);
                   }}
-                  className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
+                  className="italic py-1 px-8 bg-lime-500 rounded-[10px] text-center text-white cursor-pointer "
                 >
                   Next
                 </button>
@@ -111,10 +111,19 @@ function Footer() {
             <div className="flex flex-row gap-10 justify-around mt-[10px] ">
               <button
                 onClick={() => {
+                  setShow(!show);
+                  setFirstNo(false);
+                }}
+                className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
+              >
+                Back
+              </button>
+              <button
+                onClick={() => {
                   setFirstNo(false);
                   setSecond(true);
                 }}
-                className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
+                className="italic py-1 px-8 bg-lime-500 rounded-[10px] text-center text-white cursor-pointer "
               >
                 Next
               </button>
@@ -136,10 +145,19 @@ function Footer() {
             <div className="flex flex-row gap-10 justify-around mt-[10px] ">
               <button
                 onClick={() => {
+                  setFirstNo(!firstNo);
+                  setSecond(false);
+                }}
+                className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
+              >
+                Back
+              </button>
+              <button
+                onClick={() => {
                   setSecond(false);
                   setThird(true);
                 }}
-                className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
+                className="italic py-1 px-8 bg-lime-500 rounded-[10px] text-center text-white cursor-pointer "
               >
                 Next
               </button>
@@ -161,10 +179,19 @@ function Footer() {
             <div className="flex flex-row gap-10 justify-around mt-[10px] ">
               <button
                 onClick={() => {
+                  setSecond(!secondNo);
+                  setThird(false);
+                }}
+                className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
+              >
+                Back
+              </button>
+              <button
+                onClick={() => {
                   setThird(false);
                   setFourth(true);
                 }}
-                className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
+                className="italic py-1 px-8 bg-lime-500 rounded-[10px] text-center text-white cursor-pointer "
               >
                 Next
               </button>
@@ -185,10 +212,19 @@ function Footer() {
             <div className="flex flex-row gap-10 justify-around mt-[10px] ">
               <button
                 onClick={() => {
+                  setThird(!thirdNo);
+                  setFourth(false);
+                }}
+                className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
+              >
+                Back
+              </button>
+              <button
+                onClick={() => {
                   setFourth(false);
                   setFifth(true);
                 }}
-                className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
+                className="italic py-1 px-8 bg-lime-500 rounded-[10px] text-center text-white cursor-pointer "
               >
                 Next
               </button>
@@ -209,10 +245,19 @@ function Footer() {
             <div className="flex flex-row gap-10 justify-around mt-[10px] ">
               <button
                 onClick={() => {
+                  setFourth(!fourthNo);
+                  setFifth(false);
+                }}
+                className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
+              >
+                Back
+              </button>
+              <button
+                onClick={() => {
                   setFifth(false);
                   setSixth(true);
                 }}
-                className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
+                className="italic py-1 px-8 bg-lime-500 rounded-[10px] text-center text-white cursor-pointer "
               >
                 Next
               </button>
@@ -233,6 +278,15 @@ function Footer() {
               className="h-[250px] w-[250px] cursor-pointer"
             ></video>
             <div className="flex flex-row gap-10 justify-around mt-[10px] ">
+              <button
+                onClick={() => {
+                  setFifth(!fifthNo);
+                  setSixth(false);
+                }}
+                className="italic py-1 px-8 bg-blue-500 rounded-[10px] text-center text-white cursor-pointer "
+              >
+                Back
+              </button>
               <button
                 onClick={() => {
                   setSixth(false);

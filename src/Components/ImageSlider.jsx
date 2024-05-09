@@ -33,7 +33,7 @@ export default function ImageSlider() {
       img: photo3,
       quote:
         "Capturing moments with her is like collecting treasures of happiness that last a lifetime 📸💫.",
-      name: "Aaryan",
+      name: "Sahitya",
     },
     {
       img: photo4,
@@ -45,23 +45,23 @@ export default function ImageSlider() {
       img: photo5,
       quote:
         "She's not just in the picture; she's the masterpiece that makes every moment unforgettable 🖼️💖.",
-      name: "Nandish",
+      name: "Sanvi",
     },
     {
       img: photo6,
       quote: "With you, every day is a new chapter in our love story 💞📖",
-      name: "Idiot",
+      name: "Shobha",
     },
     {
       img: photo7,
       quote:
         "In every picture, she paints a thousand words of beauty, grace, and strength 🎨✨.",
-      name: "Nandish",
+      name: "Nagesh",
     },
     {
       img: photo8,
       quote: "Capturing memories with you is my favorite pastime 📸💖",
-      name: "Aaryan",
+      name: "Spandana",
     },
     {
       img: photo9,
@@ -158,7 +158,7 @@ export default function ImageSlider() {
               leaveTo="opacity-0 translate-x-4"
               beforeEnter={() => heightFix()}
             >
-              <div className="text-[14px] italic text-white before:content-['\201C'] after:content-['\201D'] ">
+              <div className="text-[14px] mt-16 italic text-white before:content-['\201C'] after:content-['\201D'] ">
                 {testimonial.quote}
               </div>
             </Transition>

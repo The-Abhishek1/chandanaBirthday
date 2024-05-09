@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import { db, storage } from "../FireBase/FireBase";
 import { collection, addDoc } from "firebase/firestore";
-import video1 from "../bindu/videos/stupid_writess-11-04-2024-0001.mp4";
-import video2 from "../bindu/videos/_chandu._.creation_-26-03-2024-0001.mp4";
-import video3 from "../bindu/videos/_love__factory_-26-03-2024-0001.mp4";
-import video4 from "../bindu/videos/dn_editz_d56_-26-03-2024-0001.mp4";
-import video5 from "../bindu/videos/radha_krishn8496-26-03-2024-0001.mp4";
-
+import video1 from "../bindu/videos/chav12.mp4";
+import video2 from "../bindu/videos/chav7.mp4";
+import video3 from "../bindu/videos/chav3.mp4";
+import video4 from "../bindu/videos/chav1.mp4";
+import video5 from "../bindu/videos/chav13.mp4";
+import video6 from "../bindu/videos/chav6.mp4";
+import video7 from "../bindu/videos/chav5.mp4";
 function Footer() {
   const [show, setShow] = useState(false);
   const [firstNo, setFirstNo] = useState(false);
   const [secondNo, setSecond] = useState(false);
+  const [thirdNo, setThird] = useState(false);
+  const [fourthNo, setFourth] = useState(false);
+  const [fifthNo, setFifth] = useState(false);
+  const [sixthNo, setSixth] = useState(false);
   const [yes, setYes] = useState(false);
 
   const submitYes = async () => {
@@ -69,35 +74,23 @@ function Footer() {
           {show ? (
             <div className="flex flex-col items-center italic gap-4">
               <h3 className="text-center text-white">
-                I Love You, Do You Love Me😜❤️
+                "Her beauty shines brighter than the sun ☀️✨"
               </h3>
               <video
                 autoPlay
-                src={video2}
+                src={video1}
                 controls
                 className="h-[250px] w-[250px] cursor-pointer"
               ></video>
-
               <div className="flex flex-row justify-around gap-10 mt-[10px] ">
                 <button
                   onClick={() => {
                     setShow(false);
                     setFirstNo(true);
-                    submitNo();
                   }}
                   className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
                 >
-                  No
-                </button>
-                <button
-                  onClick={() => {
-                    setShow(false);
-                    setYes(true);
-                    submitYes();
-                  }}
-                  className="italic py-1 px-8 bg-lime-500 rounded-[10px] text-center text-white cursor-pointer"
-                >
-                  Yes
+                  Next
                 </button>
               </div>
             </div>
@@ -106,11 +99,11 @@ function Footer() {
         {firstNo ? (
           <div className="flex pb-10 flex-col items-center italic gap-4 mt-[-20px]">
             <h3 className="text-center text-white">
-              "Hey!😊 Think again? Feelings can be tricky.💭💖"
+              "Her kindness lights up every room she enters 💖😊"
             </h3>
             <video
               autoPlay
-              src={video1}
+              src={video2}
               controls
               className="h-[250px] w-[250px] cursor-pointer"
             ></video>
@@ -119,21 +112,10 @@ function Footer() {
                 onClick={() => {
                   setFirstNo(false);
                   setSecond(true);
-                  submitNo();
                 }}
                 className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
               >
-                No
-              </button>
-              <button
-                onClick={() => {
-                  setFirstNo(false);
-                  setYes(true);
-                  submitYes();
-                }}
-                className="italic py-1 px-8 bg-lime-500 rounded-[10px] text-center text-white cursor-pointer"
-              >
-                Yes
+                Next
               </button>
             </div>
           </div>
@@ -142,8 +124,7 @@ function Footer() {
         {secondNo ? (
           <div className="flex pb-10 flex-col items-center italic gap-4 mt-[-20px]">
             <h3 className="text-center text-white">
-              {" "}
-              "Hey!😊 Give it another thought? Feelings can surprise us.💭💖"
+              "Her strength and resilience inspire me every day 💪🌟"
             </h3>
             <video
               autoPlay
@@ -155,10 +136,106 @@ function Footer() {
               <button
                 onClick={() => {
                   setSecond(false);
+                  setThird(true);
+                }}
+                className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        ) : null}
+        {thirdNo ? (
+          <div className="flex pb-10 flex-col items-center italic gap-4 mt-[-20px]">
+            <h3 className="text-center text-white">
+              "Her compassion knows no bounds, touching hearts wherever she goes
+              💕😊"
+            </h3>
+            <video
+              autoPlay
+              src={video4}
+              controls
+              className="h-[250px] w-[250px] cursor-pointer"
+            ></video>
+            <div className="flex flex-row gap-10 justify-around mt-[10px] ">
+              <button
+                onClick={() => {
+                  setThird(false);
+                  setFourth(true);
+                }}
+                className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        ) : null}
+        {fourthNo ? (
+          <div className="flex pb-10 flex-col items-center italic gap-4 mt-[-20px]">
+            <h3 className="text-center text-white">
+              "Her grace and elegance are simply breathtaking 💃✨"
+            </h3>
+            <video
+              autoPlay
+              src={video5}
+              controls
+              className="h-[250px] w-[250px] cursor-pointer"
+            ></video>
+            <div className="flex flex-row gap-10 justify-around mt-[10px] ">
+              <button
+                onClick={() => {
+                  setFourth(false);
+                  setFifth(true);
+                }}
+                className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        ) : null}
+        {fifthNo ? (
+          <div className="flex pb-10 flex-col items-center italic gap-4 mt-[-20px]">
+            <h3 className="text-center text-white">
+              "Her love fills my life with endless joy and happiness 💖😍"
+            </h3>
+            <video
+              autoPlay
+              src={video6}
+              controls
+              className="h-[250px] w-[250px] cursor-pointer"
+            ></video>
+            <div className="flex flex-row gap-10 justify-around mt-[10px] ">
+              <button
+                onClick={() => {
+                  setFifth(false);
+                  setSixth(true);
+                }}
+                className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        ) : null}
+        {sixthNo ? (
+          <div className="flex pb-10 flex-col items-center italic gap-4 mt-[-20px]">
+            <h3 className="text-center text-white">
+              "Her laughter is like music to my ears 🎶😄"
+            </h3>
+            <video
+              autoPlay
+              src={video7}
+              controls
+              className="h-[250px] w-[250px] cursor-pointer"
+            ></video>
+            <div className="flex flex-row gap-10 justify-around mt-[10px] ">
+              <button
+                onClick={() => {
+                  setSixth(false);
                   alert(
-                    "Oh, looks like you found the secret button! 😉 Let's focus on creating awesome memories together, regardless of labels. Sound good? 😄🎉. Yay! Your answer warms my heart. Thank you for making me the happiest person alive! 🥰"
+                    `"Oh, looks like you found the secret button! 😉 Let's focus on creating awesome memories together, regardless of labels. Sound good? 😄🎉"`
                   );
-                  submitNo();
                 }}
                 className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
               >
@@ -166,11 +243,10 @@ function Footer() {
               </button>
               <button
                 onClick={() => {
-                  setSecond(false);
+                  setSixth(false);
                   setYes(true);
-                  submitYes();
                 }}
-                className="italic py-1 px-8 bg-lime-500 rounded-[10px] text-center text-white cursor-pointer"
+                className="italic py-1 px-8 bg-lime-500 rounded-[10px] text-center text-white cursor-pointer "
               >
                 Yes
               </button>

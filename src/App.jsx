@@ -7,7 +7,7 @@ import VideoPlayer from "./Components/VideoPlayer";
 import Slider from "./Components/Slider";
 import Form from "./Components/Form";
 import BirthdayWishes from "./Components/BirthdayWishes";
-// import Footer from "./Components/Footer";
+import Footer from "./Components/Footer";
 import Confetti from "react-confetti";
 import Comedy from "./Components/Comedy";
 import Feedback from "./Components/Feedback";
@@ -59,7 +59,7 @@ function App() {
           <Form />
           <BirthdayWishes />
           <Comedy />
-          {/* <Footer />*/}
+          <Footer />
           <Feedback />
         </div>
       )}

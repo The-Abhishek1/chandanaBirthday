@@ -1,6 +1,6 @@
 import React from "react";
 import photo from "../bindu/images/cha4.jpeg";
-import vid from "../bindu/videos/chav7.mp4";
+import vid from "../bindu/videos/chav4.mp4";
 function Images() {
   return (
     <div className="flex flex-col justify-center items-center align-middle px-4">

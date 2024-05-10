@@ -8,14 +8,16 @@ import video4 from "../bindu/videos/chav1.mp4";
 import video5 from "../bindu/videos/chav13.mp4";
 import video6 from "../bindu/videos/chav6.mp4";
 import video7 from "../bindu/videos/chav14.mp4";
+import video23 from "../bindu/videos/chav23.mp4";
 //Yes Videos
+import video20 from "../bindu/videos/chav19.mp4";
 import video15 from "../bindu/videos/chav15.mp4";
 import video16 from "../bindu/videos/chav16.mp4";
 
 //No Videos
-import video17 from "../bindu/videos/chav17.mp4";
+import video17 from "../bindu/videos/chav22.mp4";
 import video18 from "../bindu/videos/chav5.mp4";
-import video19 from "../bindu/videos/chav18.mp4";
+import video19 from "../bindu/videos/chav20.mp4";
 function Footer() {
   const [show, setShow] = useState(false);
   const [firstNo, setFirstNo] = useState(false);
@@ -28,6 +30,7 @@ function Footer() {
   const [no, setNo] = useState(false);
   const [no1, setNo1] = useState(false);
   const [no2, setNo2] = useState(false);
+  const [extra, setExtra] = useState(false);
 
   const submitYes = async () => {
     const Yes = true;
@@ -165,6 +168,40 @@ function Footer() {
               <button
                 onClick={() => {
                   setSecond(false);
+                  setExtra(true);
+                }}
+                className="italic py-1 px-8 bg-lime-500 rounded-[10px] text-center text-white cursor-pointer "
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        ) : null}
+        {extra ? (
+          <div className="flex pb-10 flex-col items-center italic gap-4 mt-[-20px]">
+            <h3 className="text-center text-white">
+              "Every frame tells a story of her grace, her laughter, her light.
+              ✨💖📸 #CapturingBeauty #HeartfeltMoments"
+            </h3>
+            <video
+              autoPlay
+              src={video23}
+              controls
+              className="h-[250px] w-[250px] cursor-pointer"
+            ></video>
+            <div className="flex flex-row gap-10 justify-around mt-[10px] ">
+              <button
+                onClick={() => {
+                  setSecond(!secondNo);
+                  setExtra(false);
+                }}
+                className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
+              >
+                Back
+              </button>
+              <button
+                onClick={() => {
+                  setExtra(false);
                   setThird(true);
                 }}
                 className="italic py-1 px-8 bg-lime-500 rounded-[10px] text-center text-white cursor-pointer "
@@ -189,7 +226,7 @@ function Footer() {
             <div className="flex flex-row gap-10 justify-around mt-[10px] ">
               <button
                 onClick={() => {
-                  setSecond(!secondNo);
+                  setExtra(!extra);
                   setThird(false);
                 }}
                 className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
@@ -329,6 +366,11 @@ function Footer() {
           </h3>
           <video
             autoPlay
+            src={video20}
+            controls
+            className="h-[250px] w-[250px] cursor-pointer"
+          ></video>
+          <video
             src={video15}
             controls
             className="h-[250px] w-[250px] cursor-pointer"

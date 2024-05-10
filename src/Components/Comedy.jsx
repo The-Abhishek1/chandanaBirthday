@@ -9,7 +9,7 @@ export default function Comedy() {
     <div className="flex flex-col gap-10 items-center justify-center">
       <div className="flex flex-col items-center justify-center gap-5">
         <h1 className="text-center font-bold italic text-white text-[20px]">
-          HER SMILE😁🐕💝
+          HER SMILE💓😇🥰😍😘
         </h1>
         <video
           className="h-[250px] w-[250px] cursor-pointer"
@@ -19,7 +19,7 @@ export default function Comedy() {
       </div>
       <div className="flex flex-col items-center justify-center gap-5">
         <h1 className="text-center font-bold italic text-white text-[20px]">
-          HER CUTENESS🤔💖💤
+          HER CUTENESS🥰🤩☺️❤‍🩹💫
         </h1>
         <video
           className="h-[250px] w-[250px] cursor-pointer"
@@ -29,7 +29,7 @@ export default function Comedy() {
       </div>
       <div className="flex flex-col items-center justify-center gap-5">
         <h1 className="text-center font-bold italic text-white text-[20px]">
-          AND WE😜💝💤
+          AND WE❤‍🩹😻😇🌍🫂💘
         </h1>
         <video
           className="h-[250px] w-[250px] cursor-pointer"

@@ -8,7 +8,14 @@ import video4 from "../bindu/videos/chav1.mp4";
 import video5 from "../bindu/videos/chav13.mp4";
 import video6 from "../bindu/videos/chav6.mp4";
 import video7 from "../bindu/videos/chav14.mp4";
+//Yes Videos
+import video15 from "../bindu/videos/chav15.mp4";
+import video16 from "../bindu/videos/chav16.mp4";
 
+//No Videos
+import video17 from "../bindu/videos/chav17.mp4";
+import video18 from "../bindu/videos/chav5.mp4";
+import video19 from "../bindu/videos/chav18.mp4";
 function Footer() {
   const [show, setShow] = useState(false);
   const [firstNo, setFirstNo] = useState(false);
@@ -18,6 +25,9 @@ function Footer() {
   const [fifthNo, setFifth] = useState(false);
   const [sixthNo, setSixth] = useState(false);
   const [yes, setYes] = useState(false);
+  const [no, setNo] = useState(false);
+  const [no1, setNo1] = useState(false);
+  const [no2, setNo2] = useState(false);
 
   const submitYes = async () => {
     const Yes = true;
@@ -289,10 +299,9 @@ function Footer() {
               </button>
               <button
                 onClick={() => {
+                  submitNo();
                   setSixth(false);
-                  alert(
-                    `"Oh, looks like you found the secret button! 😉 Let's focus on creating awesome memories together, regardless of labels. Sound good? 😄🎉"`
-                  );
+                  setNo(true);
                 }}
                 className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
               >
@@ -302,6 +311,7 @@ function Footer() {
                 onClick={() => {
                   setSixth(false);
                   setYes(true);
+                  submitYes();
                 }}
                 className="italic py-1 px-8 bg-lime-500 rounded-[10px] text-center text-white cursor-pointer "
               >
@@ -312,22 +322,129 @@ function Footer() {
         ) : null}
       </div>
       {yes ? (
-        <div className="flex pb-10 flex-col gap-4 items-center italic mt-[-30px] pb-6">
+        <div className="flex pb-10 flex-col gap-4 items-center italic mt-[-30px]">
           <h3 className="text-center text-white italic">
             "Yay! Your answer warms my heart. Thank you for making me the
             happiest person alive! 🥰💕"
           </h3>
           <video
             autoPlay
-            src={video4}
+            src={video15}
             controls
             className="h-[250px] w-[250px] cursor-pointer"
           ></video>
           <video
-            src={video5}
+            src={video16}
             controls
             className="h-[250px] w-[250px] cursor-pointer"
           ></video>
+        </div>
+      ) : null}
+      {no ? (
+        <div className="flex pb-10 flex-col items-center italic gap-4 mt-[-20px]">
+          <h3 className="text-center text-white">
+            "Hey!😊 Think again? Feelings can be tricky.💭💖"
+          </h3>
+          <video
+            autoPlay
+            src={video19}
+            controls
+            className="h-[250px] w-[250px] cursor-pointer"
+          ></video>
+          <div className="flex flex-row gap-10 justify-around mt-[10px] ">
+            <button
+              onClick={() => {
+                submitNo();
+                setNo(false);
+                setNo1(true);
+              }}
+              className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
+            >
+              No
+            </button>
+            <button
+              onClick={() => {
+                setNo(false);
+                setYes(!yes);
+                submitYes();
+              }}
+              className="italic py-1 px-8 bg-lime-500 rounded-[10px] text-center text-white cursor-pointer "
+            >
+              Yes
+            </button>
+          </div>
+        </div>
+      ) : null}
+      {no1 ? (
+        <div className="flex pb-10 flex-col items-center italic gap-4 mt-[-20px]">
+          <h3 className="text-center text-white">
+            "Hey!😊 Give it another thought? Feelings can surprise us.💭💖"
+          </h3>
+          <video
+            autoPlay
+            src={video17}
+            controls
+            className="h-[250px] w-[250px] cursor-pointer"
+          ></video>
+          <div className="flex flex-row gap-10 justify-around mt-[10px] ">
+            <button
+              onClick={() => {
+                submitNo();
+                setNo1(false);
+                setNo2(true);
+              }}
+              className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
+            >
+              No
+            </button>
+            <button
+              onClick={() => {
+                setNo1(false);
+                setYes(!yes);
+                submitYes();
+              }}
+              className="italic py-1 px-8 bg-lime-500 rounded-[10px] text-center text-white cursor-pointer "
+            >
+              Yes
+            </button>
+          </div>
+        </div>
+      ) : null}
+      {no2 ? (
+        <div className="flex pb-10 flex-col items-center italic gap-4 mt-[-20px]">
+          <h3 className="text-center text-white">
+            "Hey!😊 Think again? Feelings can be tricky.💭💖"
+          </h3>
+          <video
+            autoPlay
+            src={video18}
+            controls
+            className="h-[250px] w-[250px] cursor-pointer"
+          ></video>
+          <div className="flex flex-row gap-10 justify-around mt-[10px] ">
+            <button
+              onClick={() => {
+                submitNo();
+                setNo2(false);
+                alert(
+                  "Oh, looks like you found the secret button! 😉 Let's focus on creating awesome memories together, regardless of labels. Sound good? 😄🎉. Yay! Your answer warms my heart. Thank you for making me the happiest person alive! 🥰"
+                );
+              }}
+              className="italic py-1 px-8 bg-red-600 rounded-[10px] text-center text-white cursor-pointer "
+            >
+              No
+            </button>
+            <button
+              onClick={() => {
+                setNo2(false);
+                setYes(!yes);
+                submitYes();
+              }}
+              className="italic py-1 px-8 bg-lime-500 rounded-[10px] text-center text-white cursor-pointer "
+            >
+              Yes
+            </button>
+          </div>
         </div>
       ) : null}
     </>

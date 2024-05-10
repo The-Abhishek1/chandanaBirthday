@@ -23,7 +23,7 @@ function Header() {
         />
       </div>
       <h4 className="text-center text-[24px] italic text-white font-bold uppercase mt-2">
-        Coffee😊😆🤦‍♂️
+        Chinnimaa❤‍🩹🌍⚡🫂♾️🥳
       </h4>
     </div>
   );

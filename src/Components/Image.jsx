@@ -16,7 +16,6 @@ function Images() {
       <video
         controls
         src={vid1}
-        autoPlay
         className="m-2  h-[250px] w-auto sm:w-[800px] "
       ></video>
       <img
